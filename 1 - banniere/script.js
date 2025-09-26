@@ -28,13 +28,10 @@ function chooseAnoption(){
 btnBtnaccept.addEventListener('click',chooseAnoption);
 btnBtndeny .addEventListener('click',chooseAnoption);
 
-// class en css display none et ensuite je  un add pour ajouter cette classe là 
 
 // Besoin : Créer une bannière de cookie qui disparait quand l'utilisateur à accepter les cookies. pas de localstorage !!!
 
 
-// btn btn-accept
-// btn btn-deny
 
 // const balise = document.querySelector(cssSeelctor);
 // balise.classList.add(className);    // Ajouter
