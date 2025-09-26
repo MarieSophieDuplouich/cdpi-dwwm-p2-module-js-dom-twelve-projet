@@ -37,6 +37,7 @@ iframe{
 }
 
 .btn-sub{
+    content: "Abonné";
     border:none;
     padding: 1rem;
     color: black;
@@ -44,19 +45,37 @@ iframe{
     width:20ch;
     transition:width 0.1s;
 }
+
+
+
+
 .abonne{
-    
     width:15ch;
     background-color: rgb(139, 30, 30);
     color:white;
 }
+
+
+.
 /***********************************************/
 
 /******************* Icone like ****************/
 #icone{
+  
     transition: color 0.5s;
+    opacity: 0;
 }
+
 .happy{
+    content: url("assets/face-smile-solid-full.svg");
+    width : 1.4em;
     color:gold;
+   
 }
+
+.fa-solid.fa-face-smile{
+    opacity: 1;
+}
+
+
 /***********************************************/
