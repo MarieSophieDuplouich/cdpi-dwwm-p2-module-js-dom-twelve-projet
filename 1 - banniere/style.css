@@ -35,10 +35,14 @@ Banniere cookies
     justify-content:space-between;
     opacity: 1;
     transition:1s;
+     
 }
 
 .cookies-display-none{
-    display: none;
+    opacity: 0;
+    transition: 5s;
+    rotate: 180deg;
+    transition: 2s;
 }
 
 .cookies-texte{

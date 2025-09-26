@@ -15,7 +15,7 @@ const btnBtnaccept = document.querySelector(".btn.btn-accept");
 const btnBtndeny = document.querySelector(".btn.btn-deny");
 
 
-// Fonction pour supprimer la bannière après avoir accepté ou refusé les cookies
+// Fonction pour supprimer la bannière après avoir accepté ou refusé les cookies mettre une transition en css
 
 function chooseAnoption(){
     cookies.classList.add("cookies-display-none");
