@@ -13,7 +13,7 @@ Nouvelles compétences:
 // Sélectionner
 
 const toggleDarkmode = document.querySelectorAll("*");
-const iconChange = document.querySelector(".fa-moon");
+const changeIcon = document.querySelector(".fa-sun");
 const btnIbutton = document.querySelector(".switch");
 
 
@@ -29,12 +29,21 @@ dark_elem.classList.toggle('darkmode');
 });
 
 }
+
+
+function changeIcon_func(){
+
+changeIcon.classList.toggle('fa-moon');
+}
 //évènements
 btnIbutton.addEventListener('click', activerDarkmode);
+btnIbutton.addEventListener('click', changeIcon_func);
 
 
 //modifier DOM
 
+// remarque quand c'est un élément seul par icon moon pas besoin de foreach une fonction function.classList.toggle('fa-moon')
+// suffit amplement
 
 
 //Fetch
