@@ -14,7 +14,21 @@ const questions = document.querySelectorAll(".question");
 questions.forEach(function(question){
     // 3. Lors du click sur la question
     question.addEventListener("click",function(){
-        // 4. Je recupere la reponse correspondante et le chevron correspondante
-        // ..
+        
+        questions.forEach(item => {
+            if (item !== question) {
+                item.classList.remove('show-reponse'); 
+              
+            }
+        });
+
+        // Toggle 'active' class on the clicked question to rotate the arrow
+        question.classList.toggle('show-reponse');
+
+    
+  
     });
 });
+
+
+
