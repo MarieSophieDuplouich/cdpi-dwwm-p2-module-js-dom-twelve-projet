@@ -13,7 +13,8 @@ const modal = document.querySelector(".modal");
 //Fonction
 
 function printBurger(){
-modal.classList.add("show-modal");
+// modal.classList.add("show-modal");
+modal.classList.toggle("show-modal");
 
 
 
@@ -24,7 +25,7 @@ console.log(printBurger);
 burger.addEventListener('click', printBurger);
 
 // Modifier DOM
-burger.classList.add('show-modal');
+// burger.classList.add('show-modal');
 //Fetch
 
 
