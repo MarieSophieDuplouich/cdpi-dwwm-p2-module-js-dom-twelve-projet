@@ -27,19 +27,40 @@ Nouvelles compétences:
 
 //Sélectionner
 
-const smileyMeh = document.querySelector(".fa-solid.fa-face-meh");
-const smileyHappy = document.querySelector(".fa-solid fa-face-smile");
+// const smileyMeh = document.querySelector(".fa-solid.fa-face-meh");
+// const smileyHappy = document.querySelector(".fa-solid.fa-smile-wink.happy"); 
+const smileyHappy = document.querySelector("i"); 
 const btnBtnaccept = document.querySelector(".bloc-btn");
 const btnBtnabonnerchangecolor= document.querySelector(".btn-sub");
 const btnBtnabonnerchangetext= document.querySelector(".btn-sub");
 
-const booleanUser = false;
+let booleanUser = false;
+
+// le booléen flase true pour le bouton abonné
+
+
 // function smiley
 
 function likeSmiley(){
     
 smileyMeh.classList.add("happy");
 
+}
+
+// function changeSmiley
+
+function changeSmiley(){
+
+
+    if(smileyHappy){
+        smileyHappy.classList.toggle("fa-face-meh");
+    smileyHappy.classList.toggle("fa-smile-wink");
+    smileyHappy.classList.toggle("happy");
+    } else{
+      console.log("SOS !!!");
+    }
+
+   
 }
 
 
@@ -60,15 +81,23 @@ function action(){
     
  // function bool etat ou non abonné ou non User  true false
 
- function misClick(){
-if (hour < 15) {
-  greeting = "Good day!";
-} else {
-  greeting = "Good evening!";
+
+function cancelButton(){
+
+    if(booleanUser){
+booleanUser = false;
+        
+          btnBtnabonnerchangetext.textContent = "Abonner";
+           btnBtnabonnerchangecolor.classList.remove("abonne");
+    }
+    else {
+        booleanUser = true;
+        btnBtnabonnerchangetext.textContent = "Abonné";
+           btnBtnabonnerchangecolor.classList.add("abonne");
+        
+    }
+
 }
-
- }
-
 
 
 
@@ -76,8 +105,9 @@ if (hour < 15) {
 // évènement
 
 btnBtnaccept.addEventListener('click',likeSmiley);
-btnBtnabonnerchangecolor.addEventListener('click', btnAbonnerchangecolor);
+btnBtnabonnerchangecolor.addEventListener('click',cancelButton);
 btnBtnabonnerchangetext.addEventListener('click', action);
+smileyHappy.addEventListener('click', changeSmiley);
 
 // btnBtnabonnerchangetext.addEventListener('click', btnChangerTextabonner);
 // modifier DOM

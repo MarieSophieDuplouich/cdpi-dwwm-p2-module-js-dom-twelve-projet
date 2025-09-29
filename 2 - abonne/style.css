@@ -67,7 +67,8 @@ iframe{
 }
 
 .happy{
-    content: url("assets/face-smile-solid-full.svg");
+    /* content: url("assets/face-smile-solid-full.svg"); */
+ 
     width : 1.4em;
     color:gold;
    
@@ -76,6 +77,7 @@ iframe{
 .fa-solid.fa-face-smile{
     opacity: 1;
 }
+
 
 
 /***********************************************/
