@@ -57,9 +57,10 @@ section.darkmode{
     position: absolute;
     transition: translate 0.5s;
 }
+
 .btn.darkmode{
-    translate: 70px;
+    transform: translateX(70px);
 }
 .icon.darkmode{
-    translate: 10px;
+    transform: translateX(10px);
 }
