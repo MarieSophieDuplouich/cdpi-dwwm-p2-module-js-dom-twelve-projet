@@ -37,7 +37,4 @@ modalQuit.addEventListener("click",function(){
 });
 
 
-
-    //  modal.classList.add('modal');
-
 // quand je scroll, la fenêtre avec la classe modal apparaît ->attribut class classList.add        style.display=flex
