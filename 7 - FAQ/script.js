@@ -23,8 +23,9 @@ quesTions.forEach(function (question) {
                 // item.classList.remove('show-reponse'); 
                 item.nextElementSibling.style.maxHeight = null; // Collapse the answer          
                    const otherBtn = item.querySelector(".btn-arrow");
-                otherBtn.classList.remove("fa-chevron-up");
-                otherBtn.classList.add("fa-chevron-down");
+                        otherBtn.classList.add("fa-chevron-down");
+                   otherBtn.classList.remove("fa-chevron-up");
+           
             }
           
         });
@@ -32,20 +33,17 @@ quesTions.forEach(function (question) {
         // Toggle 'active' class on the clicked question to rotate the arrow
         rePonse.classList.toggle('show-reponse');
          
-        // Check if the answer is already open
-        if (rePonse.style.maxHeight) {
-            // If open, close it by resetting max-height
-            rePonse.style.maxHeight = null;
-             bTn.classList.remove("fa-chevron-up");
-            bTn.classList.add("fa-chevron-down");
-          
-        
-        } else {
-            // If closed, set max-height to scrollHeight to expand it
-            rePonse.style.maxHeight = rePonse.scrollHeight + 'px';
-            bTn.classList.remove("fa-chevron-down");
-            bTn.classList.add("fa-chevron-up");
-        }
+    if (rePonse.style.maxHeight) {
+    // Si ouverte → fermer
+    rePonse.style.maxHeight = null;
+    bTn.classList.remove("fa-chevron-up");
+    bTn.classList.add("fa-chevron-down");
+} else {
+    // Si fermée → ouvrir
+    rePonse.style.maxHeight = rePonse.scrollHeight + "px";
+    bTn.classList.remove("fa-chevron-down");
+    bTn.classList.add("fa-chevron-up");
+}
    
     });
 });
