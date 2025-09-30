@@ -32,8 +32,7 @@ quesTions.forEach(function (question) {
           
         // Toggle 'active' class on the clicked question to rotate the arrow
         rePonse.classList.toggle('show-reponse');
-         
-    if (rePonse.style.maxHeight) {
+if (rePonse.style.maxHeight) {
     // Si ouverte → fermer
     rePonse.style.maxHeight = null;
     bTn.classList.remove("fa-chevron-up");
