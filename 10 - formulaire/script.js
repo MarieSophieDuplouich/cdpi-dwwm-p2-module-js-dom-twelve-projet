@@ -47,6 +47,36 @@ function isValidEmail(email){
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /**
  * BONUS HORS ACTIVITE *********************************************
  * Envoyer un mail
