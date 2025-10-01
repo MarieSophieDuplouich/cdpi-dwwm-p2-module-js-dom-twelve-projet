@@ -34,30 +34,42 @@ const posts =
 
 
 posts.forEach(function(post){
-      const div = document.createElement(".post");
-  
+      const div = document.createElement("div");
+      div.classList.add("post");
+
+
     // 4. Je créer un nouveau post dans le conteneur de post pour chaque post de la BDD
-    const dIv = document.createElement("div")
+    const dIv = document.createElement("a");
     // div.textContent = post.titre,post.hashtag,post.link,post.extrait;
-      dIv.textContent = post.titre;
-     dIv.classList.add("post-titre");
+    // dIv.textContent = post.titre;
+     dIv.classList.add("post-titre"); 
+     //dans css c'est .post-titre a
+    
+     const a = document.createElement("a");
+    a.textContent = post.titre; // ton titre à l’intérieur
+    dIv.appendChild(a); // mettre "a" dans le post-titre
+
+    const diVe = document.createElement("div");
+    diVe.classList.add("post-extrait");
+    diVe.textContent = post.extrait;
+
+    const diVVe = document.createElement("div");
+    diVVe.classList.add("post-hashtag");
+    diVVe.textContent = post.hashtag;
 
 
-     const diVe = document.createElement("div");
-     diVe.classList.add("post-extrait");
-      diVe.textContent = post.extrait;
-      const diVVe = document.createElement("div");
-     diVVe.classList.add("post-hashtag");
-     diVVe.textContent = post.hashtag;
-
-
+    // const aLien = document.createElement("a");
+    // aLien.textContent = post.link;
+    //  aLien.classList.add("a");
     //  div.textContent = post.link;
       
 
     // 5. Je l'ajoute dans le conteneur de publication
-    dIv.appendChild(div);
-    diVe.appendChild(div);
-    diVVe.appendChild(div);
+  
+    div.appendChild(dIv);
+    div.appendChild(diVe);
+    div.appendChild(diVVe);
+    // div.appendChild(aLien);
 
     
      postsContainer.appendChild(div);
