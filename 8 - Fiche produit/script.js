@@ -13,8 +13,7 @@ const vignettes = document.querySelectorAll(".small");
 // 2. Je recupere la grande photo
 const fullImg = document.getElementById("full");
 
-// 3. Je recupere le bouton AJOUTER
-const btnAdd = document.querySelector(".btn-add");
+
 
 // 4. Je recupere la balise vide de message d'ajout du panier
 const panierMsg = document.querySelector(".panier-msg");
@@ -25,7 +24,7 @@ let panier = 0;
 
 
 // quand je clique sur une image elle devient  grosse
-function imageDevientgrosse{
+function imageDevientgrosse() {
 
 
 }
@@ -36,17 +35,17 @@ function imageDevientgrosse{
 // quand je clique sur le bouton ajouter Panier une phrase s'affiche avec "Vous avez nombredeproduits produits dans votre panier."
 
 
-function panierAugmente(){
-          
+function panierAugmente() {
+    // 3. Je recupere le bouton AJOUTER
+    const btnAdd = document.querySelector(".btn-add");
 
 
-
-    "Vous avez"+numberproduct+"produits dans votre panier.";
+    "Vous avez" + numberproduct + "produits dans votre panier.";
 
 
 }
 
-//évenments
+//évènements
 
 //DOM
 
