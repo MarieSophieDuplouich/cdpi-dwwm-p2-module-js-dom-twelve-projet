@@ -35,6 +35,12 @@ posts.forEach(function(post){
     // 4. Je créer un nouveau post dans le conteneur de post pour chaque post de la BDD
     
     // 5. Je l'ajoute dans le conteneur de publication
+    post-titre
+    post-extrait
+    post-hashtag
+
+    ce sont les classes
     
+
 
 });
