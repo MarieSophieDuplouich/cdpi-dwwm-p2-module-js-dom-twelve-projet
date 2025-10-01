@@ -17,19 +17,19 @@ const ctnToasts = document.querySelector(".container-toasts");
 function printFichier() {
 
 
-const toast = document.createElement("div");
+    const toast = document.createElement("div");
 
-toast.classList.add("toast");
+    toast.classList.add("toast");
 
-toast.innerHTML="Votre fichier est enregistré !";
-ctnToasts.appendChild(toast);// appenchild ici??
+    toast.innerText="Votre fichier est enregistré !";
+    ctnToasts.appendChild(toast);// appenchild ici??
 
 
 
-setTimeout(function()
-{toast.remove();
+    setTimeout(function(){
+        toast.remove();
 
-}, 2000);
+    }, 2000);
 }
 // evenement
 btn.addEventListener('click', printFichier);
