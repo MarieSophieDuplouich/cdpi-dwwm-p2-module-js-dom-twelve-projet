@@ -30,51 +30,51 @@ const message = document.getElementById("message");
 form.addEventListener("submit", function (event) {
   // 3. J'annule le comportement par défaut du formulaire  : qui consiste à envoyer une requete http GET à l'adresse de l'attribut action du formualire et donc recharger la page
   event.preventDefault();
-  
-    // reset toutes les erreurs visibles
-    document.querySelectorAll(".error").forEach(p => {
-        p.textContent = "";
-        p.classList.add("invisible");
-    });
 
-    // validation prénom
-    let erreurPrenom = validateForename(prenom);
-    if (erreurPrenom) {
-        const p = prenom.parentElement.querySelector(".error");
-        p.textContent = erreurPrenom;
-        p.classList.remove("invisible");
-    }
+  // reset toutes les erreurs visibles
+  document.querySelectorAll(".error").forEach(p => {
+    p.textContent = "";
+    p.classList.add("invisible");
+  });
 
-    // validation nom
-    let erreurNom = validateSurname(nom);
-    if (erreurNom) {
-        const p = nom.parentElement.querySelector(".error");
-        p.textContent = erreurNom;
-        p.classList.remove("invisible");
-    }
+  // validation prénom
+  let erreurPrenom = validateForename(prenom);
+  if (erreurPrenom) {
+    const p = prenom.parentElement.querySelector(".error");
+    p.textContent = erreurPrenom;
+    p.classList.remove("invisible");
+  }
 
-    // validation email
-    let erreurEmail = isValidEmail(email.value.trim()) ? "" : "Cette adresse email n'est pas valide.";
-    if (erreurEmail) {
-        const p = email.parentElement.querySelector(".error");
-        p.textContent = erreurEmail;
-        p.classList.remove("invisible");
-    }
+  // validation nom
+  let erreurNom = validateSurname(nom);
+  if (erreurNom) {
+    const p = nom.parentElement.querySelector(".error");
+    p.textContent = erreurNom;
+    p.classList.remove("invisible");
+  }
 
-    // validation message
-    let erreurMessage = validateMessage(message);
-    if (erreurMessage) {
-        const p = message.parentElement.querySelector(".error");
-        p.textContent = erreurMessage;
-        p.classList.remove("invisible");
-    }
+  // validation email
+  let erreurEmail = isValidEmail(email.value.trim()) ? "" : "Cette adresse email n'est pas valide.";
+  if (erreurEmail) {
+    const p = email.parentElement.querySelector(".error");
+    p.textContent = erreurEmail;
+    p.classList.remove("invisible");
+  }
 
-    // Si aucune erreur -> envoi du formulaire
-    if (!erreurPrenom && !erreurNom && !erreurEmail && !erreurMessage) {
-        // Ici tu peux appeler sendMail() ou autre action
-        console.log("Formulaire valide, prêt à être envoyé !");
-        // sendMail(message.value.trim(), email.value.trim());
-    }
+  // validation message
+  let erreurMessage = validateMessage(message);
+  if (erreurMessage) {
+    const p = message.parentElement.querySelector(".error");
+    p.textContent = erreurMessage;
+    p.classList.remove("invisible");
+  }
+
+  // Si aucune erreur -> envoi du formulaire
+  if (!erreurPrenom && !erreurNom && !erreurEmail && !erreurMessage) {
+    // Ici tu peux appeler sendMail() ou autre action
+    console.log("Formulaire valide, prêt à être envoyé !");
+    // sendMail(message.value.trim(), email.value.trim());
+  }
 
 
 });
@@ -127,13 +127,14 @@ function validateSurname(nom) {
 // partie message
 function validateMessage(message) {
   const messageValue = message.value.trim();
-  if (messageValue == "") return "Entrez votre message.\n"
+  if (messageValue == "")
+    return "Entrez votre message.\n";
   else if (messageValue.length < 10 || messageValue.length > 100)
-    return "Ce champ doit contenir au entre 10 et 100 caractères.\n"
+    return "Ce champ doit contenir au entre 10 et 100 caractères.\n";
   else if (/[^a-zA-Z0-9_-]/.test(messageValue))
     return "Seuls caractères permis dans le champs message : " +
-      "a-z, A-Z, 0-9,- et _.\n"
-  return ""
+      "a-z, A-Z, 0-9,- et _.\n";
+  return "";
 
 }
 
