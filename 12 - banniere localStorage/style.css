@@ -36,6 +36,12 @@ Banniere cookies
     opacity: 1;
     transition:1s;
 }
+
+.cookies-display-none{
+    opacity: 0;
+    transition: 5s;
+}
+
 .cookies-texte{
     padding: 1rem;
 }
